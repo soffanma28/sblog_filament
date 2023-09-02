@@ -69,6 +69,7 @@ class AdminPanelProvider extends PanelProvider
                 FilamentProgressbarPlugin::make()->color('#29b'),
                 FilamentAuthenticationLogPlugin::make(),
                 FilamentLanguageSwitchPlugin::make()
-            ]);
+            ])
+            ->favicon(asset('favicon/favicon.ico'));
     }
 }
