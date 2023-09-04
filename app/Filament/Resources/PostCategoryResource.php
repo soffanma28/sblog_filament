@@ -19,7 +19,14 @@ class PostCategoryResource extends Resource
 {
     protected static ?string $model = PostCategory::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-tag';
+    protected static ?int $navigationSort = 1;
+    protected static ?string $navigationGroup = 'CMS';
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
 
     public static function form(Form $form): Form
     {
